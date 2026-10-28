@@ -1,0 +1,25 @@
+{
+  "name": "aibot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deploy/index.js",
+  "scripts": {
+    "dev": "tsx watch ./types/index.ts",
+    "build": "esbuild ./types/index.ts --bundle --platform=node --target=node22 --format=cjs --outfile=deploy/index.js",
+    "start": "node deploy/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.9",
+    "esbuild": "^0.28.2",
+    "grammy": "^1.46.0",
+    "openai": "^7.45.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
